@@ -1,0 +1,6 @@
+.qtcreator/
+
+build/
+build.txt
+installer/
+*.exe

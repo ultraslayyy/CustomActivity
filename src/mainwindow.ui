@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>560</width>
+    <height>650</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>560</width>
+    <height>650</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Custom Discord Activity</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="mainLayout">
+    <property name="spacing">
+     <number>10</number>
+    </property>
+    <property name="leftMargin">
+     <number>14</number>
+    </property>
+    <property name="topMargin">
+     <number>14</number>
+    </property>
+    <property name="rightMargin">
+     <number>14</number>
+    </property>
+    <property name="bottomMargin">
+     <number>14</number>
+    </property>
+    <item>
+     <widget class="QScrollArea" name="scrollArea">
+      <property name="frameShape">
+       <enum>QFrame::Shape::NoFrame</enum>
+      </property>
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scrollContents">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>518</width>
+         <height>741</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="contentLayout">
+        <item>
+         <widget class="QGroupBox" name="connectionGroup">
+          <property name="title">
+           <string>Discord Connection</string>
+          </property>
+          <layout class="QFormLayout" name="connectionLayout">
+           <item row="0" column="1">
+            <widget class="QLineEdit" name="applicationIdEdit">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string>1570349057879183471</string>
+             </property>
+             <property name="placeholderText">
+              <string>Enter your Discord Application ID</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="statusLabelCaption">
+             <property name="text">
+              <string>Status:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLabel" name="connectionStatusLabel">
+             <property name="text">
+              <string>Disconnected</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0" colspan="2">
+            <layout class="QHBoxLayout" name="connectionButtonsLayout">
+             <item>
+              <widget class="QPushButton" name="connectButton">
+               <property name="text">
+                <string>Connect</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="disconnectButton">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+               <property name="text">
+                <string>Disconnect</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item row="0" column="0">
+            <widget class="QCheckBox" name="applicationIdEnabledCheck">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+             <property name="text">
+              <string>Application ID</string>
+             </property>
+             <property name="checked">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="activityGroup">
+          <property name="title">
+           <string>Activity</string>
+          </property>
+          <layout class="QFormLayout" name="activityLayout">
+           <item row="1" column="0">
+            <widget class="QLabel" name="typeLabel">
+             <property name="text">
+              <string>Activity type:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QComboBox" name="activityTypeCombo">
+             <item>
+              <property name="text">
+               <string>Playing</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Streaming</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Listening</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Watching</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>CustomStatus</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Competing</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>HangStatus</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="detailsLabel">
+             <property name="text">
+              <string>Details:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QLineEdit" name="detailsEdit">
+             <property name="placeholderText">
+              <string>What are you doing?</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="stateLabel">
+             <property name="text">
+              <string>State:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QLineEdit" name="stateEdit">
+             <property name="placeholderText">
+              <string>Additional activity information</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="nameLabel">
+             <property name="text">
+              <string>Name:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLineEdit" name="nameEdit">
+             <property name="placeholderText">
+              <string>Optional Activity Name (default: Custom Status)</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="assetsGroup">
+          <property name="title">
+           <string>Assets</string>
+          </property>
+          <layout class="QFormLayout" name="assetsLayout">
+           <item row="0" column="0">
+            <widget class="QLabel" name="largeImageLabel">
+             <property name="text">
+              <string>Large image key:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLineEdit" name="largeImageEdit">
+             <property name="placeholderText">
+              <string>large_image</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="largeTextLabel">
+             <property name="text">
+              <string>Large image text:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLineEdit" name="largeTextEdit">
+             <property name="placeholderText">
+              <string>Hover text</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="smallImageLabel">
+             <property name="text">
+              <string>Small image key:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QLineEdit" name="smallImageEdit">
+             <property name="placeholderText">
+              <string>small_image</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="smallTextLabel">
+             <property name="text">
+              <string>Small image text:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QLineEdit" name="smallTextEdit">
+             <property name="placeholderText">
+              <string>Hover text</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="timestampsGroup">
+          <property name="title">
+           <string>Timestamps</string>
+          </property>
+          <layout class="QVBoxLayout" name="timestampsLayout">
+           <item>
+            <layout class="QFormLayout" name="timestampsFormLayout">
+             <item row="0" column="0">
+              <widget class="QCheckBox" name="startTimeEnabledCheck">
+               <property name="text">
+                <string>Start time</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QDateTimeEdit" name="startTimeEdit">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+               <property name="displayFormat">
+                <string>dd/MM/yyyy HH:mm:ss</string>
+               </property>
+               <property name="calendarPopup">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QCheckBox" name="endTimeEnabledCheck">
+               <property name="text">
+                <string>End time</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QDateTimeEdit" name="endTimeEdit">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+               <property name="displayFormat">
+                <string>dd/MM/yyyy HH:mm:ss</string>
+               </property>
+               <property name="calendarPopup">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="buttonsGroup">
+          <property name="title">
+           <string>Custom Buttons (Maximum 2)</string>
+          </property>
+          <layout class="QFormLayout" name="buttonsLayout">
+           <item row="0" column="0">
+            <widget class="QLabel" name="button1Label">
+             <property name="text">
+              <string>Button 1 label:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLineEdit" name="button1TextEdit">
+             <property name="placeholderText">
+              <string>Visit Website</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="button1UrlLabel">
+             <property name="text">
+              <string>Button 1 URL:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLineEdit" name="button1UrlEdit">
+             <property name="placeholderText">
+              <string>https://example.com</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="button2Label">
+             <property name="text">
+              <string>Button 2 label:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QLineEdit" name="button2TextEdit">
+             <property name="placeholderText">
+              <string>Documentation</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="button2UrlLabel">
+             <property name="text">
+              <string>Button 2 URL:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QLineEdit" name="button2UrlEdit">
+             <property name="placeholderText">
+              <string>https://example.com/docs</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <spacer name="contentSpacer">
+          <property name="orientation">
+           <enum>Qt::Orientation::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="actionsLayout">
+      <item>
+       <widget class="QPushButton" name="clearActivityButton">
+        <property name="text">
+         <string>Clear Activity</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Orientation::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="exitButton">
+        <property name="text">
+         <string>Exit</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="actionSpacer">
+        <property name="orientation">
+         <enum>Qt::Orientation::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="setActivityButton">
+        <property name="text">
+         <string>Set Activity</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
